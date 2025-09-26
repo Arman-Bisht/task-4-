@@ -7,12 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2025-09-26
+
 ### Added
-- Initial project setup with Git best practices
-- CI/CD pipeline with GitHub Actions
-- Docker containerization
-- Infrastructure as Code with Terraform
-- Monitoring setup with Prometheus and Grafana
+- Metrics endpoint for application monitoring
+- User authentication system with token-based auth
+- Role-based access control (RBAC)
+- Protected API routes
+- Admin dashboard endpoints
+
+### Enhanced
+- API server with authentication middleware
+- Request tracking and metrics collection
+- Memory and CPU usage monitoring
 
 ## [1.0.0] - 2025-09-26
 

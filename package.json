@@ -1,6 +1,6 @@
 {
   "name": "devops-project",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A comprehensive DevOps project demonstrating Git workflow best practices",
   "main": "src/api/server.js",
   "scripts": {
