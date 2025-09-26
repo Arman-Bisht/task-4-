@@ -12,7 +12,6 @@ on:
 env:
   NODE_VERSION: '18'
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   # Code Quality and Testing
@@ -89,7 +88,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@v5
       with:
-        images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+        images: ${{ env.REGISTRY }}/arman-bisht/devops-project
         tags: |
           type=ref,event=branch
           type=ref,event=pr
@@ -121,7 +120,7 @@ jobs:
     - name: Deploy to staging
       run: |
         echo "🚀 Deploying to staging environment..."
-        echo "Image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:develop"
+        echo "Image: ${{ env.REGISTRY }}/arman-bisht/devops-project:develop"
         # Add actual deployment commands here
         
   # Deploy to Production
@@ -139,7 +138,7 @@ jobs:
     - name: Deploy to production
       run: |
         echo "🚀 Deploying to production environment..."
-        echo "Image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:main"
+        echo "Image: ${{ env.REGISTRY }}/arman-bisht/devops-project:main"
         # Add actual deployment commands here
         
   # Notification
