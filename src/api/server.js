@@ -4,6 +4,7 @@ const helmet = require('helmet');
 require('dotenv').config();
 
 const { router: metricsRouter } = require('./routes/metrics');
+const { router: authRouter } = require('./routes/auth');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -49,6 +50,9 @@ app.get('/api/info', (req, res) => {
 
 // Metrics endpoint
 app.use('/metrics', metricsRouter);
+
+// Authentication endpoints
+app.use('/auth', authRouter);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
