@@ -187,6 +187,9 @@ For support and questions:
 - Contact the DevOps team at devops@company.com
 - Check our [documentation](docs/)
 
+## Status
+🚀 Project deployed and CI/CD pipeline active!
+
 ## Changelog
 
 See [CHANGELOG.md](CHANGELOG.md) for a list of changes and version history.
