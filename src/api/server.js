@@ -3,6 +3,8 @@ const cors = require('cors');
 const helmet = require('helmet');
 require('dotenv').config();
 
+const { router: metricsRouter } = require('./routes/metrics');
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -44,6 +46,9 @@ app.get('/api/info', (req, res) => {
     ]
   });
 });
+
+// Metrics endpoint
+app.use('/metrics', metricsRouter);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
